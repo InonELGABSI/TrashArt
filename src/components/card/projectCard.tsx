@@ -34,9 +34,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     const handleMouseDown = () => setIsDragging(true);
     const handleTouchStart = () => setIsDragging(true);
 
-    const handleMouseUp = () => setIsDragging(false);
-    const handleTouchEnd = () => setIsDragging(false);
-
     useEffect(() => {
         const handleGlobalMove = (e: MouseEvent | TouchEvent) => {
             if (isDragging) {
