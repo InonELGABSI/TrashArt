@@ -1,4 +1,3 @@
-import React from 'react';
 import blue from '../../assets/kolaj/blue.jpg';
 import green from '../../assets/kolaj/green.png';
 import red from '../../assets/kolaj/red.png';

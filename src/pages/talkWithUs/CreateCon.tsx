@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const CreateCon = () => {
     return (
         <div className="w-full pb-20 flex justify-center px-4">

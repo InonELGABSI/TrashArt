@@ -4,10 +4,9 @@ interface HowToProps {
     image: string;
     materials: string[];
     steps: string[];
-    onBack?: () => void;
 }
 
-export const HowTo: React.FC<HowToProps> = ({ image, materials, steps, onBack }) => {
+export const HowTo: React.FC<HowToProps> = ({ image, materials, steps }) => {
     const [checkedMaterials, setCheckedMaterials] = useState<boolean[]>(
         new Array(materials.length).fill(false)
     );

@@ -1,4 +1,3 @@
-import React from 'react';
 import logoType from '../../assets/logo-type.png';
 import { Kolaj } from './Kolaj';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import vcar1 from '../../assets/vcar1.png';
 import vcar2 from '../../assets/vcar2.png';
 import vcar3 from '../../assets/vcar3.png';

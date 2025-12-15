@@ -1,4 +1,3 @@
-import React from 'react';
 import contactHeroBg from '../../assets/contactHero.png';
 import con1 from '../../assets/icons/con1.png'; // Whatsapp
 import con2 from '../../assets/icons/con2.png'; // Email

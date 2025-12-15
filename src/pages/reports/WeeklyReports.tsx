@@ -1,4 +1,3 @@
-import React from 'react';
 import { VerticalReportCard } from '../../components/reports/VerticalReportCard';
 import { HorizontalReportCard } from '../../components/reports/HorizontalReportCard';
 import car1 from '../../assets/car1.jpg';

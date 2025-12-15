@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { VerticalReportCard } from '../../components/reports/VerticalReportCard';
 import rep1 from '../../assets/reports/all/rep1.jpg';
 import rep2 from '../../assets/reports/all/rep2.jpg';
