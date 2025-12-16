@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export const Hero = () => {
     return (
-        <div className=" text-center h-screen flex flex-col justify-center items-center px-4 py-0 gap-20 relative overflow-hidden">
+        <div className="text-center min-h-screen flex flex-col justify-center items-center px-4 pt-32 pb-10 gap-10 md:gap-20 relative overflow-hidden">
                 {/* section 1 */}
 
             <div> 
@@ -15,10 +15,10 @@ export const Hero = () => {
                 </div>
                 <div>
                 {/* First Hebrew sentence */}
-                <div className="text-[36px] font-semibold mb-0 w-[300px] leading-relaxed break-words mx-auto" dir="rtl">
+                <div className="text-[36px] font-semibold mb-0 w-full max-w-[300px] leading-relaxed break-words mx-auto" dir="rtl">
                     הצטרפו לקהילה שמוכיחה
                 </div>
-                <div className="text-[36px] font-semibold mb-6 w-[500px] leading-relaxed break-words mx-auto" dir="rtl">
+                <div className="text-[36px] font-semibold mb-6 w-full max-w-[500px] leading-relaxed break-words mx-auto" dir="rtl">
                    שמה שנזרק יכול לשנות עולם
                 </div>
                 </div>

@@ -28,7 +28,7 @@ export const ContactHero = () => {
     return (
         <div className="w-full min-h-screen flex flex-col ">
             {/* Hero Section with Background Image */}
-            <div className="w-full h-[90vh] relative flex items-center justify-center bg-[#EDE8DE]">
+            <div className="w-full min-h-[90vh] relative flex items-center justify-center bg-[#EDE8DE] pt-32">
                 <div 
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{ backgroundImage: `url(${contactHeroBg})` }}
