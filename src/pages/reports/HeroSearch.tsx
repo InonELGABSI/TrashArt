@@ -16,10 +16,10 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ title, subtitle, backgro
             />
 
             <div className="relative z-10 max-w-3xl w-full flex flex-col items-center gap-6">
-                <h1 className="text-[32px] font-bold text-[#1A1A2E]" dir="rtl">
+                <h1 className="text-[48px] font-bold text-[#1A1A2E]" dir="rtl">
                     {title}
                 </h1>
-                <p className="text-[28px] font-light text-[#1A1A2E]" dir="rtl">
+                <p className="text-[32px] font-light text-[#1A1A2E]" dir="rtl">
                     {subtitle}
                 </p>
                 
@@ -32,18 +32,18 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ title, subtitle, backgro
                     <input 
                         type="text" 
                         placeholder="חפשו נושאים, רעיונות ויוצרים" 
-                        className="w-full py-4 pr-20 pl-40 rounded-full bg-white text-gray-500 text-xl shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all text-right placeholder-gray-400"
+                        className="w-full py-4 pr-20 pl-40 rounded-full bg-white text-gray-500 text-[24px] shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all text-right placeholder-gray-400"
                         dir="rtl"
                     />
                     
                     {/* Button (Left) */}
-                    <button className="absolute left-0 top-0 bottom-0 bg-black text-white rounded-full px-8 flex items-center gap-3 hover:bg-[#2a3450] transition-colors group">
+                    <button className="absolute cursor-pointer left-0 top-0 bottom-0 bg-[var(--color-dark-blue)] text-white rounded-full px-8 flex items-center gap-3 hover:bg-[var(--color-blue)] transition-colors group">
                         <div className="bg-white rounded-full p-1.5 transition-transform group-hover:-translate-x-1">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#1B2236]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                             </svg>
                         </div>
-                        <span className="font-bold text-xl tracking-wide">חיפוש</span>
+                        <span className="font-bold text-[24px] tracking-wide">חיפוש</span>
                     </button>
                 </div>
             </div>

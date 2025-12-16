@@ -8,10 +8,12 @@ import { AboutPage } from './pages/about/AboutPage'
 import { CommunityPage } from './pages/community/CommunityPage'
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
+import ScrollToTop from './components/layout/ScrollToTop'
 
 function App() {
   return (
     <>
+    <ScrollToTop />
     <Navbar />
     <Routes>
       <Route path="/" element={<HomePage />} />

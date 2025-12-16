@@ -39,21 +39,21 @@ export const WeeklyReports = () => {
     ];
 
     return (
-        <section className="max-w-7xl mx-auto px-4 py-16" dir="rtl">
-            <h2 className="text-4xl font-bold text-[#1B2236] mb-12 border-b-2 border-gray-200 pb-4 inline-block">
+        <section className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16" dir="rtl">
+            <h2 className="text-4xl font-bold text-[#1B2236] mb-4 pb-4 inline-block">
                 כתבות השבוע
             </h2>
             
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                 {/* Right Column - Vertical Report (User requested Vertical on Right) */}
                 <div className="lg:col-span-5">
-                    <VerticalReportCard {...mainReport} />
+                    <VerticalReportCard {...mainReport} imageClassName="w-full aspect-[8/7]" />
                 </div>
 
                 {/* Left Column - 3 Horizontal Reports */}
-                <div className="lg:col-span-7 flex flex-col gap-8">
+                <div className="lg:col-span-7 flex flex-col gap-10">
                     {sideReports.map((report, index) => (
-                        <HorizontalReportCard key={index} {...report} />
+                        <HorizontalReportCard key={index} {...report} imageClassName="w-[260px] h-[200px]" />
                     ))}
                 </div>
             </div>

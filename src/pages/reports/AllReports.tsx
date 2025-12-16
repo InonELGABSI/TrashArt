@@ -7,12 +7,20 @@ import rep4 from '../../assets/reports/all/rep4.jpg';
 import rep5 from '../../assets/reports/all/rep5.jpg';
 import rep6 from '../../assets/reports/all/rep6.jpg';
 
+import user1 from '../../assets/avatars/user1.jpg';
+import user2 from '../../assets/avatars/user2.jpg';
+import user3 from '../../assets/avatars/user3.jpg';
+import user4 from '../../assets/avatars/user4.jpg';
+import user5 from '../../assets/avatars/user5.jpg';
+import user6 from '../../assets/avatars/user6.jpg';
+
 export const AllReports = () => {
     const [visibleCount, setVisibleCount] = useState(6);
 
     const reports = [
         {
             image: rep1,
+            avatar: user1,
             author: "רותי קדוש",
             date: "21.03.2023",
             title: "להפוך זבל לזהב: תערוכה חדשה בחולון מוקדשת לשקית האשפה",
@@ -20,6 +28,7 @@ export const AllReports = () => {
         },
         {
             image: rep2,
+            avatar: user2,
             author: "גלעד מלצר",
             date: "13.10.2021",
             title: "היופי שאפשר להפיק מהזבל",
@@ -27,6 +36,7 @@ export const AllReports = () => {
         },
         {
             image: rep3,
+            avatar: user3,
             author: "ליהיא משיח",
             date: "29.05.2023",
             title: "יצירות מבדים, חבלים וצמר",
@@ -34,6 +44,7 @@ export const AllReports = () => {
         },
         {
             image: rep4,
+            avatar: user4,
             author: "אליה מסיאס",
             date: "20.02.2025",
             title: "ראיון אישי עם עדיה רובינזון: להפוך גרוטאות לזהב עיצובי",
@@ -41,13 +52,15 @@ export const AllReports = () => {
         },
         {
             image: rep5,
+            avatar: user5,
             author: "מאקו",
             date: "21.03.2023",
             title: "מחדשים את אוצרות הקניון - פופ-אפ ייחודי בקניון עזריאלי",
-            description: "שיתוף פעולה מרגש בין עמותת JUST A SECOND לקניון עזריאלי גבעתיים הציג איך אפשר להפוך חפצים שנזרקו לאוצרות מעוצבים"
+            description: <>שיתוף פעולה מרגש בין עמותת <span className="font-alumni tracking-wide text-lg">JUST A SECOND</span> לקניון עזריאלי גבעתיים הציג איך אפשר להפוך חפצים שנזרקו לאוצרות מעוצבים</>
         },
         {
             image: rep6,
+            avatar: user6,
             author: "איריס ג'רבי",
             date: "21.03.2023",
             title: "האמנות שמחיה את הרחוב: יצירה קהילתית פסולת עירונית",
@@ -56,6 +69,7 @@ export const AllReports = () => {
         // Duplicates for mock data
         {
             image: rep1,
+            avatar: user1,
             author: "רותי קדוש",
             date: "21.03.2023",
             title: "להפוך זבל לזהב: תערוכה חדשה בחולון מוקדשת לשקית האשפה",
@@ -63,6 +77,7 @@ export const AllReports = () => {
         },
         {
             image: rep2,
+            avatar: user2,
             author: "גלעד מלצר",
             date: "13.10.2021",
             title: "היופי שאפשר להפיק מהזבל",
@@ -70,6 +85,7 @@ export const AllReports = () => {
         },
         {
             image: rep3,
+            avatar: user3,
             author: "ליהיא משיח",
             date: "29.05.2023",
             title: "יצירות מבדים, חבלים וצמר",
@@ -77,6 +93,7 @@ export const AllReports = () => {
         },
         {
             image: rep4,
+            avatar: user4,
             author: "אליה מסיאס",
             date: "20.02.2025",
             title: "ראיון אישי עם עדיה רובינזון: להפוך גרוטאות לזהב עיצובי",
@@ -84,13 +101,15 @@ export const AllReports = () => {
         },
         {
             image: rep5,
+            avatar: user5,
             author: "מאקו",
             date: "21.03.2023",
             title: "מחדשים את אוצרות הקניון - פופ-אפ ייחודי בקניון עזריאלי",
-            description: "שיתוף פעולה מרגש בין עמותת JUST A SECOND לקניון עזריאלי גבעתיים הציג איך אפשר להפוך חפצים שנזרקו לאוצרות מעוצבים"
+            description: <>שיתוף פעולה מרגש בין עמותת <span className="font-alumni tracking-wide text-lg">JUST A SECOND</span> לקניון עזריאלי גבעתיים הציג איך אפשר להפוך חפצים שנזרקו לאוצרות מעוצבים</>
         },
         {
             image: rep6,
+            avatar: user6,
             author: "איריס ג'רבי",
             date: "21.03.2023",
             title: "האמנות שמחיה את הרחוב: יצירה קהילתית פסולת עירונית",
@@ -101,14 +120,19 @@ export const AllReports = () => {
     const visibleReports = reports.slice(0, visibleCount);
 
     return (
-        <section className="max-w-7xl mx-auto px-4 py-16" dir="rtl">
-            <h2 className="text-4xl font-bold text-[#1B2236] mb-12 border-b-2 border-gray-200 pb-4 inline-block">
+        <section className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16" dir="rtl">
+            <h2 className="text-4xl font-bold text-[#1B2236] mb-4 pb-4 inline-block">
                 כל הכתבות
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-24">
                 {visibleReports.map((report, index) => (
-                    <VerticalReportCard key={index} {...report} />
+                    <VerticalReportCard 
+                        key={index} 
+                        {...report} 
+                        imageClassName="w-full aspect-square" 
+                        descriptionClassName="w-[370px]"
+                    />
                 ))}
             </div>
 
@@ -116,7 +140,7 @@ export const AllReports = () => {
                 <div className="flex justify-center mt-16">
                     <button 
                         onClick={() => setVisibleCount(prev => prev + 6)}
-                        className="bg-[#1B2236] text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-[#2a3450] transition-colors"
+                        className="bg-[#1B2236] cursor-pointer text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-[#2a3450] transition-colors"
                     >
                         טעינת כתבות נוספות
                     </button>

@@ -8,10 +8,10 @@ export const Footer = () => {
     return (
         <div dir="rtl" className="w-full font-sans">
             {/* CTA Section */}
-            <div className="bg-[#F7F5F0] py-24 flex flex-col items-center justify-center text-center gap-6 px-4">
+            <div className=" py-24 flex flex-col items-center justify-center text-center gap-6 px-4">
                 <img src={hartIcon} alt="Heart" className="w-8 h-8 object-contain opacity-80" />
-                <h2 className="text-4xl font-bold text-gray-900 tracking-tight">מוכנים להתחיל ליצור?</h2>
-                <p className="text-xl text-gray-600 font-light max-w-2xl">
+                <h2 className="text-[20px] font-light">מוכנים להתחיל ליצור?</h2>
+                <p className="text-[24px] max-w-2xl">
                     הצטרפו לאלפי יוצרים שכבר הפכו את הזבל שלהם לאמנות
                 </p>
             </div>
@@ -56,11 +56,11 @@ export const Footer = () => {
                         <ul className="space-y-4 text-gray-600">
                             <li className="flex items-center gap-3 justify-center md:justify-start">
                                 <img src={instagramIcon} alt="Instagram" className="w-5 h-5 object-contain" />
-                                <span>ArtrashIL</span>
+                                <span className="font-alumni text-xl tracking-wide">ArtrashIL</span>
                             </li>
                             <li className="flex items-center gap-3 justify-center md:justify-start">
                                 <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 object-contain" />
-                                <span>054-8009998</span>
+                                <span className="font-alumni text-xl tracking-wide">054-8009998</span>
                             </li>
                             <li className="flex items-center gap-3 justify-center md:justify-start">
                                 <img src={facebookIcon} alt="Facebook" className="w-5 h-5 object-contain" />
@@ -70,7 +70,7 @@ export const Footer = () => {
                     </div>
 
                     {/* Column 5: Logo/Icon (Leftmost) */}
-                    <div className="flex items-center justify-center md:justify-center">
+                    <div className="flex items-start justify-center md:justify-center">
                          <img 
                             src={smallLogo} 
                             alt="ArtTrash" 
@@ -81,7 +81,7 @@ export const Footer = () => {
                 
                 {/* Copyright / Bottom Bar */}
                 <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-300 text-center text-gray-500 text-sm">
-                    <p>© {new Date().getFullYear()} ArtTrash. כל הזכויות שמורות.</p>
+                    <p>© {new Date().getFullYear()} <span className="font-alumni text-lg">ArtTrash</span>. כל הזכויות שמורות.</p>
                 </div>
             </footer>
         </div>

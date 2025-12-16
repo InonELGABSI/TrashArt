@@ -3,13 +3,14 @@ import logo1 from '../../assets/small-think1.png';
 import logo2 from '../../assets/small-think2.png';
 import logo3 from '../../assets/small-think3.png';
 import logo4 from '../../assets/small-think4.png';
+import { Link } from "react-router-dom";
 
 export const Steps = () => {
     const steps = [
-        { number: 1, title: "בוחרים מה למחזר", description: "צלמו או העלו תמונה של חומר,חפץ או פסולת שתרצו להפוך ליצירהבקבוקים, פחיות, קרטונים או כל דבר שמסקרן אתכם.", icon: logo1 },
-        { number: 2, title: "מקבלים השראה", description: "המערכת החכמה שלנו תציע לכם רעיונות, סקיצות וסגנונות עיצוביים שמתאימים בדיוק למה שבחרתם.", icon: logo2 },
-        { number: 3, title: "מתחילים ליצור", description: "התחילו ליצור בעצמכם!השתמשו בהדרכות, בטיפים ובחומרים מהאתר כדי להפוך את הרעיון למציאות.", icon: logo3 },
         { number: 4, title: "משתפים בקהילה", description: "שתפו את היצירה שלכם בגלריית הקהילה, קבלו השראה מאחרים, והראו שגם ממיחזור קטן מתחיל שינוי גדול.", icon: logo4 },
+        { number: 3, title: "מתחילים ליצור", description: "התחילו ליצור בעצמכם!השתמשו בהדרכות, בטיפים ובחומרים מהאתר כדי להפוך את הרעיון למציאות.", icon: logo3 },
+        { number: 2, title: "מקבלים השראה", description: "המערכת החכמה שלנו תציע לכם רעיונות, סקיצות וסגנונות עיצוביים שמתאימים בדיוק למה שבחרתם.", icon: logo2 },
+        { number: 1, title: "בוחרים מה למחזר", description: "צלמו או העלו תמונה של חומר,חפץ או פסולת שתרצו להפוך ליצירהבקבוקים, פחיות, קרטונים או כל דבר שמסקרן אתכם.", icon: logo1 },
     ];
     return (
         <>
@@ -38,9 +39,9 @@ export const Steps = () => {
         
         {/* Start Create Button - Centered */}
         <div className="flex justify-center mt-12 mb-24">
-            <button className="bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition-colors duration-200 shadow-lg">
+            <Link to="/DIYPage" className="cursor-pointer bg-[var(--color-dark-blue)] text-white px-8 py-4 rounded-[16px] font-bold text-lg hover:[var(--color-blue)] transition-colors duration-200 shadow-lg">
                 התחל ליצור
-            </button>
+            </Link>
         </div>
         </>
     );

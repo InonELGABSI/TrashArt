@@ -65,25 +65,25 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             {/* Image Comparison Slider */}
             <div 
                 ref={containerRef}
-                className="relative w-full aspect-square overflow-hidden rounded-2xl cursor-ew-resize select-none"
+                className="relative w-full aspect-[4/3] overflow-hidden cursor-ew-resize select-none"
                 onMouseDown={handleMouseDown}
                 onTouchStart={handleTouchStart}
             >
-                {/* After Image (Background) */}
+                {/* Before Image (Background - Right side initially) */}
                 <img 
-                    src={afterImage} 
-                    alt="After" 
+                    src={beforeImage} 
+                    alt="Before" 
                     className="absolute top-0 left-0 w-full h-full object-cover"
                 />
 
-                {/* Before Image (Foreground - Clipped) */}
+                {/* After Image (Foreground - Left side initially - Clipped) */}
                 <div 
                     className="absolute top-0 left-0 w-full h-full overflow-hidden"
                     style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
                 >
                     <img 
-                        src={beforeImage} 
-                        alt="Before" 
+                        src={afterImage} 
+                        alt="After" 
                         className="absolute top-0 left-0 w-full h-full object-cover max-w-none"
                         style={{ width: '100%', height: '100%' }} 
                     />
@@ -104,8 +104,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
             {/* Content */}
             <div className="mt-4 text-right dir-rtl">
-                <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">{title}</h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                <h3 className="text-[32px] text-[var(--color-blue)] font-bold text-[#1A1A2E] mb-2">{title}</h3>
+                <p className=" text-[24px] mb-4 leading-relaxed">
                     {description}
                 </p>
                 
@@ -120,7 +120,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                             </div>
                         )}
                     </div>
-                    <span className="text-sm font-medium text-gray-800">{authorName}</span>
+                    <span className="text-[24px] font-medium text-gray-800">{authorName}</span>
                 </div>
             </div>
         </div>

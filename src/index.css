@@ -1,5 +1,41 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Galacti';
+  src: url('./assets/fonts/GalactiCondensedRegular-FFC.woff2') format('woff2'),
+       url('./assets/fonts/GalactiCondensedRegular-FFC.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AbrilFatface';
+  src: url('./assets/fonts/AbrilFatface-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlumniSans';
+  src: url('./assets/fonts/AlumniSans-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-galacti: "Galacti", sans-serif;
+  --font-abril: "AbrilFatface", serif;
+  --font-alumni: "AlumniSans", sans-serif;
+  --color-black: #161616;
+  --color-blue: #263978;
+  --color-dark-blue: #1A1F35;
+}
+
 body {
-  background-color: #F7F5F0;
+  background-color: #FEFAF6;
+  font-family: "Galacti", sans-serif;
+  font-weight: 500;
 }

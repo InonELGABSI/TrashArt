@@ -14,17 +14,23 @@ import after5 from '../../assets/projects/after5.jpg';
 import before6 from '../../assets/projects/before6.jpg';
 import after6 from '../../assets/projects/after6.jpg';
 
-// Dummy avatars (using some existing assets or placeholders if needed, but ProjectCard handles missing avatars)
-// For now I'll leave avatars undefined to use the initials fallback, or I could import some random small images.
+// Import avatars
+import user1 from '../../assets/avatars/user1.jpg';
+import user2 from '../../assets/avatars/user2.jpg';
+import user3 from '../../assets/avatars/user3.jpg';
+import user4 from '../../assets/avatars/user4.jpg';
+import user5 from '../../assets/avatars/user5.jpg';
+import user6 from '../../assets/avatars/user6.jpg';
 
 const projects = [
     {
         id: 1,
-        before: before1,
-        after: after1,
-        title: "מעמד נרות ייחודי מבקבוקי זכוכית ישנים",
-        description: "במקום לזרוק את הבקבוקים שנשארו מארוחת שבת, הפכתי אותם למעמד נרות. זה היה ממש קל וכיפי, ואפילו הפתיע אותי כמה יפה זה יצא",
-        author: "ירדנה לוי"
+        before: before3,
+        after: after3,
+        title: "אהיל חדש מכוסות חד פעמיות שנאספו",
+        description: "במקום לזרוק את כוסות היוגורט שנאספו לאורך החודש, חיברתי אותן אחת לשנייה ויצרתי אהיל חדש ומלא אור. זה היה פשוט ומפתיע לראות",
+        author: "ליאור אביגדור",
+        authorAvatar: user1
     },
     {
         id: 2,
@@ -32,23 +38,26 @@ const projects = [
         after: after2,
         title: "שולחן צד מצמיג קרוע של רכב",
         description: "מי היה מאמין שצמיג ישן שמצאתי ליד המדרכה יהפוך לשולחן צד? קצת צבע, קצת ניקוי, וקיבלתי פריט שמוסיף אופי לבית. גאה בטירוף איך שזה יצא",
-        author: "איריס לוי"
+        author: "איריס לוי",
+        authorAvatar: user2
     },
     {
         id: 3,
-        before: before3,
-        after: after3,
-        title: "אהיל חדש מכוסות חד פעמיות שנאספו",
-        description: "במקום לזרוק את כוסות היוגורט שנאספו לאורך החודש, חיברתי אותן אחת לשנייה ויצרתי אהיל חדש ומלא אור. זה היה פשוט ומפתיע לראות",
-        author: "ליאור אביגדור"
+        before: before1,
+        after: after1,
+        title: "מעמד נרות ייחודי מבקבוקי זכוכית ישנים",
+        description: "במקום לזרוק את הבקבוקים שנשארו מארוחת שבת, הפכתי אותם למעמד נרות. זה היה ממש קל וכיפי, ואפילו הפתיע אותי כמה יפה זה יצא",
+        author: "ירדנה לוי",
+        authorAvatar: user3
     },
     {
         id: 4,
-        before: before4,
-        after: after4,
-        title: "מראה ייחודית ממגשי ביצים ממוחזרים",
-        description: "הפכתי מגשי ביצים פשוטים למסגרת פיסולית שיש לה טקסטורה, עומק ואופי. קצת צבע, קצת גזירה - ומראה אחת קיבלה חיים חדשים",
-        author: "חגית אלול"
+        before: before6,
+        after: after6,
+        title: "מובייל נוצץ מדיסקים ישנים",
+        description: "במקום להשאיר את הדיסקים מעלים אבק במגירה, חתכתי, קישרתי והוספתי קצת ניצוץ - ופתאום נולד מובייל נוצץ שחופס אור ומכניס חיים לפינה בבית.",
+        author: "סמדר ירוני",
+        authorAvatar: user4
     },
     {
         id: 5,
@@ -56,16 +65,18 @@ const projects = [
         after: after5,
         title: "אדנית צמחים מבקבוקי פלסטיק חתוכים",
         description: "במקום לזרוק את בקבוקי הפלסטיק, חתכתי, צבעתי והרכבתי אותם לאדניות מהממות שמשדרגות את הגינה. פשוט, צבעוני ועם טאץ' אישי",
-        author: "נעמי גביזון"
+        author: "נעמי גביזון",
+        authorAvatar: user5
     },
     {
         id: 6,
-        before: before6,
-        after: after6,
-        title: "מובייל נוצץ מדיסקים ישנים",
-        description: "במקום להשאיר את הדיסקים מעלים אבק במגירה, חתכתי, קישרתי והוספתי קצת ניצוץ - ופתאום נולד מובייל נוצץ שחופס אור ומכניס חיים לפינה בבית.",
-        author: "סמדר ירוני"
-    }
+        before: before4,
+        after: after4,
+        title: "מראה ייחודית ממגשי ביצים ממוחזרים",
+        description: "הפכתי מגשי ביצים פשוטים למסגרת פיסולית שיש לה טקסטורה, עומק ואופי. קצת צבע, קצת גזירה - ומראה אחת קיבלה חיים חדשים",
+        author: "חגית אלול",
+        authorAvatar: user6
+    },
 ];
 
 export const AllProjects = () => {
@@ -79,6 +90,7 @@ export const AllProjects = () => {
                     title={project.title}
                     description={project.description}
                     authorName={project.author}
+                    authorAvatar={project.authorAvatar}
                 />
             ))}
         </div>

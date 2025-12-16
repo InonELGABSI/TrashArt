@@ -19,22 +19,22 @@ export const HowTo: React.FC<HowToProps> = ({ image, materials, steps }) => {
 
     return (
         <div className="w-full animate-fade-in">
-            <div className="flex flex-col lg:flex-row-reverse gap-8 bg-[#FDFBF7] rounded-3xl overflow-hidden">
+            <div className="flex flex-col lg:flex-row-reverse gap-0 bg-[#FDFBF7] overflow-hidden border-3 border-[#EAE8E1]">
                 
                 {/* Right Column - Image */}
                 <div className="w-full lg:w-1/3">
-                    <div className="h-full w-full bg-white p-4 rounded-3xl border border-[#EAE8E1]">
-                        <img src={image} alt="Result" className="w-full h-full object-cover rounded-2xl" />
+                    <div className="h-full w-full py-10 px-12 border border-[#EAE8E1]">
+                        <img src={image} alt="Result" className="w-full h-full object-cover" />
                     </div>
                 </div>
 
                 {/* Middle Column - Materials */}
-                <div className="w-full lg:w-1/3 flex flex-col items-center border-l border-r border-[#EAE8E1] px-6 py-4">
-                    <h3 className="text-2xl font-bold text-[#1A1A2E] mb-8">? מה צריך</h3>
+                <div className="w-full lg:w-1/3 flex flex-col items-center justify-start border-l-3 border-r-3 border-[#EAE8E1] px-10 py-6">
+                    <h3 className="text-[32px] font-bold text-[#1A1A2E] mb-8">? מה צריך</h3>
                     <div className="w-full space-y-6 dir-rtl">
                         {materials.map((material, index) => (
                             <div key={index} className="flex items-center gap-2 justify-between border-b border-gray-300 pb-2">
-                                <span className="text-lg text-gray-800 text-right flex-1">{material}</span>
+                                <span className="text-[24px] text-right flex-1">{material}</span>
                                 <div 
                                     onClick={() => toggleMaterial(index)}
                                     className={`w-6 h-6 border-2 border-[#1A1A2E] cursor-pointer flex items-center justify-center transition-colors ${checkedMaterials[index] ? 'bg-[#4CAF50] border-[#4CAF50]' : 'bg-white'}`}
@@ -51,15 +51,15 @@ export const HowTo: React.FC<HowToProps> = ({ image, materials, steps }) => {
                 </div>
 
                 {/* Left Column - Instructions */}
-                <div className="w-full lg:w-1/3 flex flex-col items-center px-6 py-4">
-                    <h3 className="text-2xl font-bold text-[#1A1A2E] mb-8">הוראות הכנה</h3>
+                <div className="w-full lg:w-1/3 flex flex-col items-center justify-start px-10 py-6">
+                    <h3 className="text-[32px] font-bold text-[#1A1A2E] mb-8">הוראות הכנה</h3>
                     <div className="w-full space-y-6">
                         {steps.map((step, index) => (
-                            <div key={index} className="flex gap-4 items-start flex-row-reverse">
-                                <div className="flex-shrink-0 w-8 h-8 bg-[#1A1A2E] text-white flex items-center justify-center font-bold rounded">
+                            <div key={index} className="flex gap-4 items-center flex-row-reverse">
+                                <div className="flex-shrink-0 w-8 h-8 bg-[var(--color-dark-blue)] text-white text-[24px] flex items-center justify-center rounded">
                                     {index + 1}
                                 </div>
-                                <p className="text-right text-gray-800 text-lg leading-tight flex-1 dir-rtl">
+                                <p className="text-right text-[24px] leading-tight flex-1 dir-rtl">
                                     {step}
                                 </p>
                             </div>
@@ -69,7 +69,7 @@ export const HowTo: React.FC<HowToProps> = ({ image, materials, steps }) => {
             </div>
 
             <div className="flex justify-center mt-12">
-                <button className="bg-[#1A1A2E] text-white px-12 py-3 rounded-xl text-lg font-medium hover:bg-[#2a2a40] transition-colors shadow-lg">
+                <button className=" text-[24px] bg-[#1A1A2E] text-white px-6 py-3 rounded-xl text-lg font-medium hover:bg-[#2a2a40] transition-colors shadow-lg">
                     שתף בקהילה
                 </button>
             </div>

@@ -2,6 +2,8 @@ type VerticalCarProps = {
 	images: string[];
 	/** Animation duration in seconds */
 	speed?: number;
+	/** Height of the carousel mask */
+	height?: string;
 };
 
 const duplicate = (items: string[]) => {
@@ -19,7 +21,7 @@ const duplicate = (items: string[]) => {
 	return [...baseItems, ...baseItems];
 };
 
-export const VerticalCar = ({ images, speed = 20 }: VerticalCarProps) => {
+export const VerticalCar = ({ images, speed = 20, height = "520px" }: VerticalCarProps) => {
 	if (!images || images.length === 0) {
 		return null;
 	}
@@ -33,7 +35,7 @@ export const VerticalCar = ({ images, speed = 20 }: VerticalCarProps) => {
 
 	return (
 		<div className="vertical-carousel">
-			<div className="vertical-carousel__mask">
+			<div className="vertical-carousel__mask" style={{ height }}>
 				<div className="vertical-carousel__columns">
 					<div
 						className="vertical-carousel__column"

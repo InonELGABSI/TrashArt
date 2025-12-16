@@ -12,7 +12,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed top-0 left-0 right-0 z-50 flex items-center bg-[#E4DFD3]/90 px-6 py-2">
+            <nav className="fixed text-[24px] top-0 left-0 right-0 z-50 flex items-center bg-[#E4DFD3]/90 px-6 py-2">
                 {/* Logo section - 20% width, centered */}
                 <div className="w-1/5 flex justify-center items-center"> 
                     <Link to="/">
